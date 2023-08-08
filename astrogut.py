@@ -19,15 +19,8 @@ def load_container_config(builder: FlaskAppBuilder):
     except:
         raise AppError('No configuration exists for environment: {}'.format(env))
     
-    kafka_producer = env_config.pop('kafka_producer')
 
-    raw_data = {
-        'madblad': env_config,
-        'kafka_producer': kafka_producer,
-        'aws': {
-            'region_name': os.getenv('AWS_DEFAULT_REGION', 'us-east-1')
-        }
-    }
+    raw_data = env_config
     container_config = ContainerConfiguration(raw_data)
     container_config.validate()
     builder.set_container_config(container_config)
