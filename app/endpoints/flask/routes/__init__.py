@@ -10,3 +10,5 @@ def register_route_endpoints(app):
     app.add_url_rule('/health', 'health', health)
 
     # Register custom routes.
+    from . import reporters
+    app.register_blueprint(reporters.bp, url_prefix=reporters.prefix)
