@@ -1,2 +1,2 @@
 configs:
-  astrology_api_url: null
+  astrology_api_url: 'http://localhost:3000'
