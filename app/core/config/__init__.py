@@ -6,7 +6,7 @@ class FeatureConfiguration(Model):
             # Account for single-module configuration
             try:
                 config = {}
-                config['modules'] = [{
+                config['services'] = [{
                     'function_path': raw_data.pop('module_path'),
                     'params': raw_data.pop('params', {}),
                     'data_mapping': raw_data.pop('data_mapping', None),
@@ -19,7 +19,7 @@ class FeatureConfiguration(Model):
             except KeyError:
                 super().__init__(raw_data=raw_data)
 
-        class FunctionConfiguration(Model):
+        class ServiceConfiguration(Model):
             function_path = t.StringType(required=True)
             data_mapping = t.StringType()
             use_services = t.StringType()
@@ -28,7 +28,7 @@ class FeatureConfiguration(Model):
 
         use_role = t.StringType()
         header_mapping = t.StringType()
-        functions = t.ListType(t.ModelType(FunctionConfiguration), default=[])
+        services = t.ListType(t.ModelType(ServiceConfiguration), default=[])
         log_params = t.DictType(t.StringType(), default={})
 
 
