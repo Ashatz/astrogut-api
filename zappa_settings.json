@@ -1,0 +1,13 @@
+{
+    "prod": {
+        "app_function": "astrogut.flask_app",
+        "aws_region": "us-east-1",
+        "environment_variables": {},
+        "profile_name": "astrogut",
+        "project_name": "astrogut-api",
+        "runtime": "python3.9",
+        "s3_bucket": "astrogut-api",
+        "timeout_seconds": 300,
+        "log_level": "INFO"
+    }
+}
