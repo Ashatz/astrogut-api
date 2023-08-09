@@ -7,7 +7,7 @@ def load_container_config(builder: FlaskAppBuilder):
 
     from app.core import ContainerConfiguration
     env = os.getenv(APP_ENV, DEFAULT_APP_ENV)
-    config_file = APP_CONFIGURATION_FILE
+    config_file = DEFAULT_CONFIG_FILE
     if env != DEFAULT_APP_ENV:
         config_file = CONFIG_FILE_FORMAT.format(env)
 
