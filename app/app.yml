@@ -1,7 +1,6 @@
-modules:
+features:
   reporters:
-    features:
-      register_reporter:
-        functions:
-          - data_mapping: register_reporter
-            function_path: reporters.register_new_reporter
+    register_reporter:
+      services:
+        - data_mapping: register_reporter
+          function_path: reporters.register_new_reporter
