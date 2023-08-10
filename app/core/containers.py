@@ -11,3 +11,7 @@ class Container():
     
     def __init__(self, config: ContainerConfiguration):
         self.config = config
+
+    def reporter_repo(self):
+        from ..domains.reporter.repo.dynamodb import DynamoDBRepository
+        return DynamoDBRepository(self.config.reporter_table)
