@@ -1,2 +1,3 @@
 configs:
   astrology_api_url: 'http://localhost:3000'
+  reporters_table: 'astrogut-reporters-1'
