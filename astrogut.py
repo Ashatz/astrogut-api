@@ -1,5 +1,5 @@
 from app import *
-from app.constants import *
+from app.core.constants import *
 
 
 def load_container_config(builder: FlaskAppBuilder): 

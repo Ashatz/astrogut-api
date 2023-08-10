@@ -2,7 +2,7 @@ from functools import wraps
 
 from flask import Flask
 
-from ...constants import *
+from ...core.constants import *
 from ...core import *
 from ...core.config import AppConfiguration
 
